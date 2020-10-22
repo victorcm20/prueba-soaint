@@ -1,0 +1,6 @@
+Archivo React js
+-----------------------------------------
+
+1.- React.Component // no es necesario que vaya React. puede ir component
+2.- class FetchGithub extends React.Component { // No esta cerrar la llave
+3.- No tiene los import
