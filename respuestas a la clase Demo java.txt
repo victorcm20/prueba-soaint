@@ -1,0 +1,12 @@
+Prueba back Demo.java 
+-----------------------------------
+1.- private boolean initialized; //Esta variable no se esta utilizando por lo tanto no debería ir por buenas prácticas.
+2.- private static Map dbParams; //Esta variable mal declara, debería definirse key value Map<String,String>
+3.-logger = Logger.getLogger("MyLog"); // Definirlo en el constructor no seria adecuado, deberia ir al iniciar la clase private static final 
+4.- stmt.executeUpdate("insert into Log_Values('" + message + "', " + String.valueOf(t) + ")"); // Statement stmt debería cerrarse una ejecuta la sentencia sql.
+5.- Connection connection // La conexion de igual manera deberia cerrar una vez ejecutada la sentencia sql.
+6.- stmt.executeUpdate("insert into Log_Values('" + message + "', " + String.valueOf(t) + ")"); // aqui se careria porque message es boolean no un String y no es el mensaje del log que deberia recibir.
+7.-String l = null; // Esta variable al final no es asigna para algun propocito.
+8.-stmt.executeUpdate("insert into Log_Values('" + message + "', " + String.valueOf(t) + ")"); // Esta sentencia sql esta mal solo tiene los valores pero no esta asignando las columnas
+9.-File logFile = new File(dbParams.get("logFileFolder") + "/logFile.txt"); // Se generaria una exception ya no encontraria la ruta resource del proyecto
+10.-FileHandler fh = new FileHandler(dbParams.get("logFileFolder") + "/logFile.txt");// Se generaria una exception ya no encontraria la ruta resource del proyecto
