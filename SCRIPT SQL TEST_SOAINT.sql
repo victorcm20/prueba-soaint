@@ -9,7 +9,7 @@ INSERT INTO rol(name, log_file, log_console, log_message, log_warning, log_error
 VALUES('employee', false, true, true, false, false, true);
 
 INSERT INTO rol(name, log_file, log_console, log_message, log_warning, log_error, log_database)
-VALUES('customer', false, true, false, false, false, false);
+VALUES('customer', false, true, true, false, false, false);
 
 SELECT * FROM rol;
 
